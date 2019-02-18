@@ -7,7 +7,7 @@
 class CardGame
 
 
-  def checkforAce(card) #wrong format of function, should be check_for_ace. 
+  def checkforAce(card) #wrong format of function, should be check_for_ace.
     if card.value = 1 #should be == instead of =
       return true
     else
@@ -17,15 +17,15 @@ class CardGame
 
   dif highest_card(card1 card2) #should be def instead of dif. Also missing comma between card1 and card2
   if card1.value > card2.value #if statement should be indented
-    return card
+    return card #should be card_1.suit
   else
-    return card2
+    return card2 #should be card_2.suit
   end
 end # end should be indented
 end # this end should not be here at all
 
 def self.cards_total(cards) #it is instance method not class method, so self is not required
-  total
+  total #should be total = 0
   for card in cards
     total += card.value
     return "You have a total of" + total # return should be after end
