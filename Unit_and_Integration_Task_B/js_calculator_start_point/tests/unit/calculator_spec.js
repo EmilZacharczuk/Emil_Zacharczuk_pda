@@ -10,10 +10,16 @@ describe('calculator', function () {
   it('it has a sample test', function(){
     assert.equal(true, true)
   })
-  it('it adds 1 to 4 and get 5', function(){
+  it('it should adds 1 to 4 and get 5', function(){
     calculator.previousTotal = 1;
     calculator.add(4);
     actual = calculator.runningTotal;
     assert.strictEqual(actual, 5);
+  })
+  it('it should subtract 4 from 7 and get 3', function(){
+    calculator.previousTotal = 7;
+    calculator.subtract(4);
+    actual = calculator.runningTotal;
+    assert.strictEqual(actual, 3);
   })
 });
