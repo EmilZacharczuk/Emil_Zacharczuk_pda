@@ -34,4 +34,19 @@ describe('calculator', function () {
     actual = calculator.runningTotal;
     assert.strictEqual(actual, 3);
   })
+  it('it should concatenate multiple number button clicks', function() {
+    calculator.numberClick(1);
+    calculator.numberClick(1);
+    calculator.numberClick(2);
+    actual = calculator.runningTotal;
+    assert.strictEqual(actual, 112);
+  })
+  it('it should chain multiple operations together', function(){
+    calculator.numberClick(1);
+    calculator.operatorClick('+');
+    calculator.numberClick(2);
+    calculator.operatorClick('=');
+    actual = calculator.runningTotal;
+    assert.strictEqual(actual, 3);
+  })
 });
