@@ -48,7 +48,6 @@ describe('calculator functionality', function() {
     element(by.css('#operator_equals')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('15')
   })
-
   it('should work for negative numbers', function () {
     running_total = element(by.css('#running_total'))
     element(by.css('#number1')).click();
@@ -59,7 +58,6 @@ describe('calculator functionality', function() {
     element(by.css('#operator_equals')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('-4')
   })
-
   it('should work for decimal numbers', function () {
     running_total = element(by.css('#running_total'))
     element(by.css('#number1')).click();
@@ -70,4 +68,35 @@ describe('calculator functionality', function() {
     element(by.css('#operator_equals')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('9.5')
   })
+  it('should work for large numbers', function () {
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number1')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#number3')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#number1')).click();
+    element(by.css('#operator_add')).click();
+    element(by.css('#number9')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('1.2311111111111113e+211')
+  })
+
 });
